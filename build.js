@@ -92,12 +92,7 @@ var UsersList = function (_React$Component2) {
       return React.createElement(
         "div",
         null,
-        React.createElement("img", { src: this.props.user.avatar_url, style: { maxWidth: '100px' } }),
-        React.createElement(
-          "a",
-          { href: this.props.user.html_url, target: "_blank" },
-          this.props.user.login
-        )
+        this.users
       );
     }
   }, {
@@ -110,6 +105,34 @@ var UsersList = function (_React$Component2) {
   }]);
 
   return UsersList;
+}(React.Component);
+
+var User = function (_React$Component3) {
+  _inherits(User, _React$Component3);
+
+  function User() {
+    _classCallCheck(this, User);
+
+    return _possibleConstructorReturn(this, (User.__proto__ || Object.getPrototypeOf(User)).apply(this, arguments));
+  }
+
+  _createClass(User, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "div",
+        null,
+        React.createElement("img", { src: this.props.user.avatar_url, style: { maxWidth: '100px' } }),
+        React.createElement(
+          "a",
+          { href: this.props.user.html_url, target: "_blank" },
+          this.props.user.login
+        )
+      );
+    }
+  }]);
+
+  return User;
 }(React.Component);
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
